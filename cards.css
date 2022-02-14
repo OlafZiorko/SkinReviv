@@ -74,7 +74,9 @@
   grid-template-columns: 1fr;
   grid-template-rows: auto;
 }
-
+.offers::before {
+  bottom: -1rem;
+}
 .price {
   padding: 1rem;
   margin: 0;
