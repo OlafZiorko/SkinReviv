@@ -513,7 +513,9 @@ img {
   max-width: 600px;
   min-width: 90%;
 }
-
+.card--seven:hover {
+  transform: translateY(0);
+}
 .card--title {
   color: var(--clr-orange);
   font-family: var(--fn-fm-para);
