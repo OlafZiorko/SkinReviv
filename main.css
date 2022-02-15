@@ -551,10 +551,12 @@ img {
   color: var(--clr-text);
   line-height: 1.6;
 }
+
 .contect--email {
   display: block;
   padding: 1rem 0;
 }
+.contect--number a,
 .contect--email a {
   color: var(--clr-text);
 }
