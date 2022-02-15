@@ -8,11 +8,36 @@
   --clr-text: hsl(270, 2%, 21%);
   --clr-whiteop: hsla(0, 0%, 100%, 0.787);
   --clr-white: hsl(0, 0%, 100%);
+
+  /*FONTS FOR HEADINGS AND WEIGHTS */
+  --fn-fm: "Playfair Display", serif;
+  --fnt-wght-400: 400;
+  --fnt-wght-500: 500;
+  --fnt-wght-700: 700;
+
+  /*FONTS FOR PARAGRAPHS AND WEIGHTS */
+  --fn-fm-para: "Poppins", sans-serif;
+  --fnt-wght-para-200: 200;
+  --fnt-wght-para-400: 400;
+  --fnt-wght-para-600: 600;
 }
 .offers {
   justify-content: center;
   align-items: center;
   margin: 2rem 0;
+}
+
+.header__page--offers {
+  color: var(--clr-text);
+  font-family: var(--fn-fm-para);
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  font-weight: var(--fnt-wght-para-400);
+  justify-self: start;
+  margin: 1rem 0;
+  padding: 1rem;
+  position: relative;
+  text-transform: capitalize;
+  z-index: 999999999;
 }
 .offers::before {
   background-color: var(--clr-cream);
@@ -51,6 +76,9 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: baseline;
+}
+.card__info > * {
+  flex: 1;
 }
 .cons--list {
   list-style-type: square;
@@ -135,5 +163,9 @@
   }
   .card--description {
     margin-bottom: 0.5rem;
+  }
+  .card--six .card__header {
+    /* background-position: left; */
+    object-fit: scale-down;
   }
 }

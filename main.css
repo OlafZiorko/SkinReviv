@@ -31,7 +31,7 @@
   box-sizing: border-box;
 }
 html {
-  line-height: 1.15;
+  line-height: 1.5;
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
 }
@@ -62,7 +62,11 @@ img {
   box-shadow: 8px 8px 24px 0px rgba(78, 72, 65, 1);
 }
 
-.dropdown__wrapper.show--menu {
+.dropdown__wrapper.show--menu,
+.dropdown__menu,
+.dropdown__menus,
+.hero__section,
+.dropdown--details {
   display: flex;
   flex-direction: column;
 }
@@ -99,16 +103,21 @@ img {
 }
 
 .dropdown__menus {
-  display: flex;
-  flex-direction: column;
   flex: 1;
   justify-content: flex-start;
 }
 
-.dropdown_l--title {
-  color: var(--clr-brown);
+.dropdown_l--title,
+.offer--title .company--name,
+.hero--appointment:hover,
+.footer--subtitle,
+.btn {
   font-family: var(--fn-fm--para);
   font-weight: var(--fnt-wght-para-400);
+}
+
+.dropdown_l--title {
+  color: var(--clr-brown);
   font-size: clamp(0.95rem, 4.6vw, 1.3rem);
   padding: 1.3rem 2rem;
   text-transform: uppercase;
@@ -116,8 +125,6 @@ img {
 }
 
 .dropdown__menu {
-  display: flex;
-  flex-direction: column;
   justify-content: stretch;
 }
 .l2 {
@@ -144,8 +151,6 @@ img {
 }
 
 .dropdown--details {
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   border-top: 1px solid var(--clr-dark-cream);
@@ -315,11 +320,6 @@ img {
 
 /*HERO SECTION */
 
-.hero__section {
-  display: flex;
-  flex-direction: column;
-}
-
 .hero--image--wrapper {
   background-image: url(./images/beauty.jpg);
   background-repeat: no-repeat;
@@ -346,7 +346,6 @@ img {
 
 .hero--appointment:hover {
   background-color: var(--clr-white);
-  font-weight: var(--fnt-wght-para-400);
 }
 
 /* ABOUT SECTION */
@@ -386,11 +385,9 @@ img {
 .btn__wrapper {
   margin: 1.5rem 0;
 }
-
 .btn {
   border-radius: 0.3em;
   font-size: 1rem;
-  font-weight: var(--fnt-wght-para-400);
   padding: 0.3rem 0.5rem;
 }
 .btn--primay {
@@ -442,7 +439,7 @@ img {
 .offer--title .company--name {
   font-size: clamp(1.66rem, 15vw, 3rem);
   font-weight: var(--fnt-wght-para-500);
-  font-family: var(--fn-fm--para);
+
   text-align: center;
 }
 
@@ -483,13 +480,15 @@ img {
   align-items: flex-end;
   grid-area: header;
   justify-content: flex-end;
+  text-transform: capitalize;
   min-height: 15rem;
 }
 .card--one .card__header {
   background-image: url(./images/pdo.jpg);
 }
 .card--two .card__header {
-  background-image: url(./images/peeling.jpg);
+  background-image: url(./images/faceNails.jpg);
+  justify-content: flex-start;
 }
 .card--three .card__header {
   background-image: url(./images/lips.jpg);
@@ -499,10 +498,23 @@ img {
 }
 .card--five .card__header {
   background-image: url(./images/manHair.jpg);
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.card--five .card__header .header__card--title {
+  color: var(--clr-text);
 }
 .card--six .card__header {
   background-image: url(./images/osocze.jpg);
+  justify-content: flex-start;
+  align-items: flex-start;
 }
+
+.card--six .card__header .header__card--title {
+  color: var(--clr-orange);
+  text-align: center;
+}
+
 .card--seven .card__header {
   background-image: url(./images/consultation.jpg);
   min-height: 25rem;
@@ -570,51 +582,26 @@ img {
 .f4 {
   margin: 1rem 1rem;
 }
-.footer__f2--subtitle,
-.footer__f3--subtitle,
-.footer__f4--subtitle,
-.footer--subtitle,
-.footer--item a,
-.footer__f2__contact,
-.footer__f2__adress {
-  color: var(--clr-cream);
-  font-family: var(--fn-fm--para);
-  font-size: 1rem;
-  font-weight: var(--fnt-wght-para-200);
-  margin-bottom: 0.4rem;
-}
-.footer__f2--subtitle,
-.footer--subtitle,
-.footer__f3--subtitle {
-  font-weight: var(--fnt-wght-para-400);
+.footer--subtitle {
   color: var(--clr-dark-cream);
   font-size: clamp(1rem, 5vw, 1.1rem);
-}
-.footer--item a,
-.footer__f2__contact,
-.footer__f2__adress {
-  font-size: clamp(0.9rem, 5vw, 1rem);
-  line-height: 1.5;
+  margin-bottom: 0.4rem;
 }
 
-.footer--item,
-.footer__f2__contact,
-.footer__f2__adress {
-  padding: 0;
+.footer--item a,
+.footer--item {
+  font-size: clamp(0.85rem, 5vw, 0.9rem);
+  color: var(--clr-dark-cream);
 }
-.footer__f2__contact,
-.footer__f2__adress {
-  display: block;
+
+.footer--item {
+  padding: 0.2rem 0;
 }
-.footer__f2__adress {
-  line-height: 1.5;
-}
-.footer__social__media {
+
+.footer__list--f5 {
   display: flex;
 }
-.footer__social__media .media--item:first-child {
-  padding-left: 0;
-}
+
 .copyright {
   padding: 1rem;
 }
